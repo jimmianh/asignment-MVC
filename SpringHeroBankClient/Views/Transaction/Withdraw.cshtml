@@ -1,0 +1,27 @@
+﻿@model SpringHeroBankClient.Models.TransactionHistory
+
+@{
+    ViewBag.Title = "Withdraw";
+}
+
+<h2>Withdraw</h2>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+   
+        
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+     
+    <form action="">
+        <div class="mb-3 mt-3">
+            <label for="withdraw" class="form-label">withdraw:</label>
+            <input type="text" class="form-control" id="withdraw" placeholder="Enter amount" name="withdraw">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+     
+}
